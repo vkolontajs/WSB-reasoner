@@ -144,7 +144,7 @@ min_date = (data.created_utc.min() + timedelta(hours=24)).to_pydatetime().date()
 max_date = (data.created_utc.max() - timedelta(hours=24)).to_pydatetime().date()
 
 # Ask for dates input
-date = st.date_input('Select day for top list preview:', min_value=min_date, max_value=max_date)
+date = st.date_input('Select day for top list preview:', min_value=min_date, max_value=max_date, value=max_date)
 
 # Top list
 st.subheader('Top ' + str(settings.top_elements) + ' mentions for  ' + date.strftime("%A, %B %e, %Y"))
