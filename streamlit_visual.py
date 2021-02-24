@@ -1,18 +1,17 @@
 # Import for excel downloading
 import base64
+import webbrowser
 from datetime import timedelta
 from io import BytesIO
 
 # Dataframe standard packages
 import numpy as np
 import pandas as pd
-
-import webbrowser
 import streamlit as st
 
+import settings
 # Project packages
 import wsb_reasoner
-import settings
 
 # Config streamlit page
 st.set_page_config(
@@ -39,7 +38,6 @@ if st.sidebar.button('Project GitHub'):
     webbrowser.open_new_tab("https://github.com/vkolontajs")
 if st.sidebar.button('Buy a coffee for my bot (crypto)'):
     webbrowser.open_new_tab("https://commerce.coinbase.com/checkout/483140a7-ae94-42e7-9bfa-6119365f44ea")
-
 
 # Get the last time
 last_updated_utc = wsb_reasoner.get_last_upload_time()

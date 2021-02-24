@@ -1,21 +1,20 @@
 # Python standard packages
 import os
-import shutil
 import re
+import shutil
 from datetime import datetime, timedelta
-import pandas as pd
 
+import pandas as pd
 # Data loading and uploading packages
 import pymongo
-from pmaw import PushshiftAPI
 import requests
-
 # NLTK tools for sentiment analysis
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from pmaw import PushshiftAPI
 
 # Settings files
 import settings
-
 
 
 def update_tickers_list_in_db():
@@ -196,23 +195,28 @@ def get_datetime_of_the_last_mention_in_db():
 
     return max_date
 
+
 def update_last_upload_time(upload_time):
     """
     Procedure loads upload last upload time to db
     :return: None
     """
-    db_handler = pymongo.MongoClient(settings.mongodb_connection_string)[settings.wall_db_name][settings.last_upload_time]
+    db_handler = pymongo.MongoClient(settings.mongodb_connection_string)[settings.wall_db_name][
+        settings.last_upload_time]
     db_handler.delete_many({})
     db_handler.insert_one({'upload_time': upload_time})
+
 
 def get_last_upload_time():
     """
     Procedure loads upload last upload time to db
     :return: None
     """
-    db_handler = pymongo.MongoClient(settings.mongodb_connection_string)[settings.wall_db_name][settings.last_upload_time]
+    db_handler = pymongo.MongoClient(settings.mongodb_connection_string)[settings.wall_db_name][
+        settings.last_upload_time]
     date = pd.to_datetime(db_handler.find_one({})['upload_time'])
     return date
+
 
 def complete_flow(reset=False):
     """
@@ -220,6 +224,9 @@ def complete_flow(reset=False):
     restarting db then put reset variable to True.
     :param reset: Boolean
     """
+
+    nltk.download('vader_lexicon')
+
     # Clean database
     if reset:
         clean_db()
