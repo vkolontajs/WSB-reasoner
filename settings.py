@@ -2,8 +2,8 @@
 alpha_api_key = ''
 
 # MongoDB credentials
-username = ''
-password = ''
+username = 'prod_view_only'
+password = 'Q65PQEsbG1Q9k8kB'
 
 # DB and collection names
 wall_db_name = 'wallstreetbets-reasoner'
