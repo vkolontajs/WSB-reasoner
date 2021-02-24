@@ -24,7 +24,7 @@ st.set_page_config(
 )
 
 # Sidebar
-st.sidebar.image(r'wsb_face.png')
+st.sidebar.image(r'wsb_face.png', use_column_width='always')
 sidebar_text = """Project powered by:
  Python,
  MongoDB,
@@ -146,7 +146,7 @@ Mentions and scores are compared on daily basis.
 False positives are possible with one-letter tickers like $B and $F.
 The top list and insight tickers data are updated on an hourly basis.
 Tickers list for searching is from ALPHA VANTAGE.
-Particular ticker comments with their scores and timestamps can be downloaded below."""
+Particular ticker comments with their scores and timestamps can be downloaded at the end of page."""
 st.text(top_list)
 # Get dates
 min_date = (data.created_utc.min() + timedelta(hours=24)).to_pydatetime().date()
