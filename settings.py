@@ -36,7 +36,7 @@ black_listed_keys = [
     'AH', 'TL', 'JAN', 'FEB', 'JUL', 'AUG', 'SEP', 'SEPT', 'OCT', 'NOV', 'FDA',
     'IV', 'ER', 'IPO', 'MILF', 'BUT', 'SSN', 'FIFA', 'USD', 'CPU',
     'AT', 'GG', 'Mar', 'MOON', 'HOLD', 'ON', 'ARE', 'DO', 'GO', 'B',
-    'OC', 'K', 'F', 'F', 'T', 'M'
+    'OC', 'K', 'F', 'F', 'T', 'M', 'U', 'C'
 ]
 
 # Streamlit parameters

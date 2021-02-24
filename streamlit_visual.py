@@ -144,7 +144,9 @@ st.title('Top ticker mentions scores')
 top_list = """The top list shows top mentions and VADER scores for respective tickers.
 Mentions and scores are compared on daily basis.
 False positives are possible with one-letter tickers like $B and $F.
-The top list and insight tickers data are updated on an hourly basis."""
+Tickers that look like wallstreetbets or meme lexicon are blacklisted.
+The top list and insight tickers data are updated on an hourly basis.
+"""
 st.write(top_list)
 # Get dates
 min_date = (data.created_utc.min() + timedelta(hours=24)).to_pydatetime().date()
