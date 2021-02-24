@@ -26,17 +26,17 @@ st.set_page_config(
 # Sidebar
 st.sidebar.image(r'wsb_face.png')
 sidebar_text = """Project powered by:
-    Python,
-    MongoDB,
-    Pushshift.io (PMAW),
-    nltk with vaderSentiment,
-    and Streamlit.
+ Python,
+ MongoDB,
+ Pushshift.io (PMAW),
+ nltk with vaderSentiment,
+ and Streamlit.
 
 Takes time to refresh."""
 st.sidebar.text(sidebar_text)
 st.sidebar.write("[LinkedIn](https://linkedin.com/in/vkolontajs)")
 st.sidebar.write("[Project GitHub](https://github.com/vkolontajs/WSB-reasoner)")
-st.sidebar.write("[Buy a Coffee](https://commerce.coinbase.com/checkout/483140a7-ae94-42e7-9bfa-6119365f44ea)")
+st.sidebar.write("[Buy a Coffee (Crypto)](https://commerce.coinbase.com/checkout/483140a7-ae94-42e7-9bfa-6119365f44ea)")
 
 # Start page
 
