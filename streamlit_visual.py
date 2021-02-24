@@ -24,7 +24,7 @@ st.set_page_config(
 )
 
 # Sidebar
-st.sidebar.image(r'wsb_face.png', use_column_width='always')
+st.sidebar.image(r'wsb_face.png', use_column_width='auto')
 sidebar_text = """Project powered by:
  Python,
  MongoDB,
