@@ -16,7 +16,7 @@ mongodb_connection_string = 'mongodb+srv://{}:{}@cluster0.cpwld.mongodb.net/{}?r
     username, password, wall_db_name)
 
 # Cut-off date - max date from which to delete comments from the last mention (in hours)
-cut_off_hours = 24 * 15
+cut_off_hours = 24 * 30
 
 # Filter out comments that have more than specified mentions of different stocks
 max_comment_mentions = 10
