@@ -145,8 +145,8 @@ top_list = """The top list shows top mentions and VADER scores for respective ti
 Mentions and scores are compared on daily basis.
 False positives are possible with one-letter tickers like $B and $F.
 The top list and insight tickers data are updated on an hourly basis.
-Tickers list is for searching is from ALPHA VANTAGE.
-Respective ticker comments with their scores and timestamps can be downloaded below."""
+Tickers list for searching is from ALPHA VANTAGE.
+Particular ticker comments with their scores and timestamps can be downloaded below."""
 st.write(top_list)
 # Get dates
 min_date = (data.created_utc.min() + timedelta(hours=24)).to_pydatetime().date()
