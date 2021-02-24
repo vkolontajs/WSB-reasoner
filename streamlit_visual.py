@@ -33,9 +33,9 @@ sidebar_text = """Project powered by:
 Takes time to refresh."""
 st.sidebar.text(sidebar_text)
 if st.sidebar.button('LinkedIn'):
-    webbrowser.open_new_tab("https://www.linkedin.com/in/vladislavs-kolontajs-372293153")
+    webbrowser.open_new_tab("https://www.linkedin.com/in/vkolontajs")
 if st.sidebar.button('Project GitHub'):
-    webbrowser.open_new_tab("https://github.com/vkolontajs")
+    webbrowser.open_new_tab("https://github.com/vkolontajs/WSB-reasoner")
 if st.sidebar.button('Buy a coffee for my bot (crypto)'):
     webbrowser.open_new_tab("https://commerce.coinbase.com/checkout/483140a7-ae94-42e7-9bfa-6119365f44ea")
 
