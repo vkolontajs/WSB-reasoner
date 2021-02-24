@@ -147,7 +147,7 @@ False positives are possible with one-letter tickers like $B and $F.
 The top list and insight tickers data are updated on an hourly basis.
 Tickers list for searching is from ALPHA VANTAGE.
 Particular ticker comments with their scores and timestamps can be downloaded below."""
-st.write(top_list)
+st.text(top_list)
 # Get dates
 min_date = (data.created_utc.min() + timedelta(hours=24)).to_pydatetime().date()
 max_date = (data.created_utc.max() - timedelta(hours=24)).to_pydatetime().date()
