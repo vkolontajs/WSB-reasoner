@@ -47,9 +47,6 @@ last_updated_utc = wsb_reasoner.get_last_upload_time()
 @st.cache
 def get_last_data_from_db(last_updated):
     
-    # Clear cache of previous run
-    caching.clear_cache()
-    
     # Get latest data
     comments_and_scores = wsb_reasoner.get_comments_and_scores_from_db()
     comments_and_scores = comments_and_scores.explode(column='tickers'). \
