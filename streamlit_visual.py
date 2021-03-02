@@ -44,7 +44,7 @@ st.sidebar.write("[Buy a Coffee (Crypto)](https://commerce.coinbase.com/checkout
 # Get the last time (to check for updates in the db)
 last_updated_utc = wsb_reasoner.get_last_upload_time()
 
-@st.cache(max_entries=2)
+@st.cache(max_entries=5)
 def get_last_data_from_db(last_updated):
     
     # Get latest data
