@@ -253,22 +253,21 @@ chart_data = chart_data[cols_for_chart]
 # Chart data
 col2.line_chart(chart_data)
 
-# Comments downloader (removed for sake of RAM performance)
-if False:
-    # Place link to download comments for particular ticker
-    def df_to_excel_link(df):
-        output = BytesIO()
-        writer = pd.ExcelWriter(output, engine='xlsxwriter')
-        df.to_excel(writer, sheet_name='Sheet1')
-        writer.save()
-        processed_data = output.getvalue()
-        b64 = base64.b64encode(processed_data)
+# # Comments downloader (removed for sake of RAM performance)
+#     # Place link to download comments for particular ticker
+#     def df_to_excel_link(df):
+#         output = BytesIO()
+#         writer = pd.ExcelWriter(output, engine='xlsxwriter')
+#         df.to_excel(writer, sheet_name='Sheet1')
+#         writer.save()
+#         processed_data = output.getvalue()
+#         b64 = base64.b64encode(processed_data)
 
-        return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">Click to ' \
-               f'download comments and vader scores for ${ticker_to_show} in Excel format (Strong language!)</a>'
+#         return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="extract.xlsx">Click to ' \
+#                f'download comments and vader scores for ${ticker_to_show} in Excel format (Strong language!)</a>'
 
 
-    # Download tickers comments with scores data
-    ticker_comments = data[data.ticker == ticker_to_show].copy()
-    ticker_comments = ticker_comments.sort_values(by='created_utc', ascending=False).reset_index(drop=True)
-    st.markdown(df_to_excel_link(ticker_comments), unsafe_allow_html=True)
+#     # Download tickers comments with scores data
+#     ticker_comments = data[data.ticker == ticker_to_show].copy()
+#     ticker_comments = ticker_comments.sort_values(by='created_utc', ascending=False).reset_index(drop=True)
+#     st.markdown(df_to_excel_link(ticker_comments), unsafe_allow_html=True)
