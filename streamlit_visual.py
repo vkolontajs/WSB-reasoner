@@ -215,7 +215,7 @@ sentiment_type = st.selectbox(
 )
 
 # Split rows
-col1, col2 = st.beta_columns([3, 8])
+col1, col2 = st.columns([3, 8])
 
 # Add slider for look-back period
 look_back = col1.slider(
